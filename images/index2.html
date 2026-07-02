@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="canonical" href="%page_url%">
+<style>
+
+ .page-container {
+  width: 1500px;
+  height: 2000px;
+  background-color: black;
+  padding: 0px;
+  margin: 0 auto;        /* centers the container horizontally */
+/* /display: flex;         /* optional — helps you center boxes inside */
+  flex-wrap: wrap;       /* allows multiple rows of boxes */
+ /*justify-content: center; /* centers boxes inside */
+  align-items: flex-start;
+  
+ }
+   /*.layout-container {
+    position: relative; /* All absolutely positioned children will be relative to this */
+    /* background-color: black;
+    width: 1500px;
+    height: 2000px;
+    border: 2px solid #333;
+    margin: 10px auto; /* Center the container on the page */
+ 
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    /* Adjust the number of columns */
+   column-gap: 150px;
+    row-gap: 150px;
+    gap: 500px;
+    /* Adjust the gap between items */
+    
+  }
+/* Common styles for the iframe containers */
+  .container-item {
+    position: absolute;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: black;
+    overflow-y: auto; /* Enable scrolling for content overflow */
+  }
+/* Specific styles for each container */
+  /*#story-container-1 {
+    width: 350px;
+    height: 250px;
+    top: 20px; /* Position from the top of the parent */
+   /* left: 30px; /* Position from the left of the parent */
+  /* Specific styles for each iframe container to place them in different spots */
+    
+  }
+  
+    #image-container-1 {
+    width: 200px;
+    height: 150px;
+    top: 300px;
+    right: -700px; /* Position from the right of the parent */
+    background-color: #FAF9F6;
+    text-align: center;
+  }
+
+  #info-container {
+    width: 400px;
+    height: 200px;
+    bottom: 20px; /* Position from the bottom of the parent */
+    left: 200px;
+    background-color: #FAF9F6;
+  }
+  #iframe-container-1 {
+    width: 350px;
+    height: 400px;
+    top: 250px;
+    left: 600px;
+    column-gap: 150px;
+    row-gap: 150px;
+  }
+
+  #iframe-container-2 {
+    width: 200px;
+    height: 150px;
+    top: 100px;
+    right: -1100px;
+    background-color: #FAF9F6;
+    text-align: center;
+  }
+  
+  #iframe-container-3 {
+    width: 400px;
+    height: 600px;
+    bottom: -1200px;
+    left: 1000px;
+    background-color: #FAF9F6;
+  }
+
+  /* Rule to make the iframe fill its parent container */
+  .container-item iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  #iframe-container-6 {
+    width: 350px;
+    height: 400px;
+    top: -700px;
+    left: 300px;
+    column-gap: 150px;
+    row-gap: 150px;
+  }
+  #iframe-container-4 {
+    width: 350px;
+    height: 400px;
+    top: 675px;
+    left: 975px;
+    column-gap: 150px;
+    row-gap: 150px;
+  }
+  #iframe-container-5 {
+    width: 400px;
+    height: 500px;
+    top: 1400px;
+    right: -600px;
+  }
+ /* .container {
+     width: 100%; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background-color: black;
+  border: 5px solid #ee3e80; padding: 1px; width: 100%; border-radius : 10px; -moz-border-radius: 10x; -webkit-border-radius: 10 px;
+    /* Set the background color for your grid items*/
+    
+    
+    
+    
+    /* Add padding for spacing */
+    
+  
+
+  /*.container p {
+   width: 25%;
+   height: 100px;
+  font-size: 25pt;
+  text-align: justify;
+  color: #E74C3C;
+  margin-bottom: 0;*/
+
+  /* Other styles for your text or objects can be added here */
+  
+
+  }
+ 
+  .pink-text {
+  color: #d4af37;
+    font-size: 12px;
+}
+
+    .yellow-text {
+      color: black;
+      font-size: 25px;
+    }
+  
+    .red-text {
+      color: black;
+      font-size: 25px;
+   
+    }
+  .story-container {
+  width: 200px ; /* Set your desired width */
+  height: 600px; /* Set your desired height */
+    bottom: -1200px;
+    left: 1000px;
+  border: 1px solid #ccc; /* Optional: Add a border for visibility */
+  padding: 0px; /* Optional: Add padding inside the container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  display: flex; /* Use flexbox for easy layout of title and content */
+ flex-direction: column; /* Stack title and content vertically */
+   
+}
+
+/*.story-container h2 {
+  margin-top: 2px; /* Remove default top margin for the title */
+ /* margin-bottom: 1px; /* Add some space below the title */
+  
+
+.story-content {
+  flex-grow: 1; /* Allow the content area to take up remaining vertical space */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+ /* padding-right: 5px; /* Optional: Add padding to prevent scrollbar from touching text */
+}
+  .story-text {
+  color: #ee3e80;
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: "Courier New", monospace;
+  text-align: left;
+  word-wrap: break-word;
+  text-align: center; /* Optional: Center the title */
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px 15px; 
+  background-color: FAF9F6;
+  border: 2px solid magenta;
+  border-radius: 8px;
+
+  scrollbar-width: thin;
+  scrollbar-color: magenta black;
+}
+
+.story-text::-webkit-scrollbar {
+  width: 8px;
+}
+.story-text::-webkit-scrollbar-thumb {
+  background-color: magenta;
+  border-radius: 6px;
+ }
+.story-text::-webkit-scrollbar-track {
+  background-color: black;
+}
+ 
+</style>
+</head>
+<body>
+ <img src="https://raw.githubusercontent.com/A-l-p-a-c-a/AlpacaTheAi/refs/heads/main/images/fotor_1756128313811.png"
+height="125px"1200 400
+width="150px"900 500
+style="position: absolute;
+top: 1150px; left: 800px;
+bottom: 5px; right: 5px"
+alt="fing">
+  
+   <img src="https://raw.githubusercontent.com/A-l-p-a-c-a/AlpacaTheAi/refs/heads/main/images/IMG_20250826_013424_671.jpg"
+height="125px"1200 400
+width="150px"900 500
+style="position: absolute;
+top: 700px; left: 400px;
+bottom: 500px; right: 400px"
+alt="fing">
+     
+<img src="https://raw.githubusercontent.com/A-l-p-a-c-a/AlpacaTheAi/refs/heads/main/images/IMG_20250902_113737_616.jpg"
+height="100px"
+width="200px"
+style="position: absolute;
+top: 216px; left: 700px;
+bottom: 884px; right: 200px"
+alt="fing">
+ 
+   
+     
+ <img src="https://raw.githubusercontent.com/A-l-p-a-c-a/AlpacaTheAi/refs/heads/main/images/IMG_20250902_113740_408.jpg"
+height="125px"1200 400
+width="150px"900 500
+style="position: absolute;
+top: 500px; left: 354px;
+bottom: 600px; right: 546px"
+alt="fing">
+  
+   <img src="https://raw.githubusercontent.com/A-l-p-a-c-a/AlpacaTheAi/refs/heads/main/images/IMG_20250902_231536_854.jpg"
+height="125px"1200 400
+width="150px"900 500
+style="position: absolute;
+top: 700px; left: 400px;
+bottom: 500px; right: 400px"
+alt="fing">
+     
+<img src="/storage/emulated/0/
+DOCTEXT/..bugs_(7).jpg"
+height="100px"
+width="200px"
+style="position: absolute;
+top: 216px; left: 700px;
+bottom: 884px; right: 200px"
+alt="fing">
+ 
+   
+     
+ <img src="/storage/emulated/0/
+DOCTEXT/..bugs_(1).jpg"
+height="125px"1200 400
+width="150px"900 500
+style="position: absolute;
+top: 500px; left: 354px;
+bottom: 600px; right: 546px"
+alt="fing">
+  
+  
+  
+<div class="page-container">
+  <!-- Background color container -->
+  <div class="grid-container">  <!--column-gap: 150px;
+    row-gap: 150px;">-->
+ 
+    <!--<div class="container">--> >
+  <div id="iframe-container-1" class="container-item">
+    <!--<div style="width: 75%; height: 420px; column-gap: 150px;
+    row-gap: 150px;">-->
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=350&height=420&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+    width="100%"
+    height="100%"      
+    style="border:none;"
+    scrolling="yes" 
+    frameborder="0" 
+    allowfullscreen="yes" 
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+  </iframe></div></div>
+    <div class="image-container-1" class="container-item">
+    <p>An interesting image could go here.</p>
+    <img src="https://raw.githubusercontent.com/A-l-p-a-c-a/AlpacaTheAi/refs/heads/main/images/fotor_1756128313811.png" alt="Placeholder Image">
+  </div>
+    <!-- <div class="container">-->
+     <div id="iframe-container-2" class="container-item">
+       <!--<div style="width: 75%; height: 420px;">-->
+ <iframe src="https://su0myn0na.com/" 
+    width="350px"
+    height="420px"      
+    style="border:none; overflow:hidden;" 
+    scrolling="yes" 
+    frameborder="0" 
+    allowfullscreen="yes"
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+  </iframe>
+</div>
+  
+     <div id="iframe-container-3" class="container-item">
+      <!--<div style="width: 75%; height: 420px;">-->
+ <iframe src="https://realest-story-fractured.github.io/TheRealestfractured/" 
+    width="350px"
+    height="420px"      
+    style="border:none; overflow:hidden;" 
+    scrolling="yes" 
+    frameborder="0" 
+    allowfullscreen="yes"
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+  </iframe>
+</div>
+    
+  
+   <div id="iframe-container-4" class="container-item">
+     <iframe src="https://a-l-p-a-c-a.github.io/AlpacaTheAi/" 
+    width="350px"
+    height="420px"      
+    style="border:none;" 
+    scrolling="yes" 
+    frameborder="0" 
+    allowfullscreen="yes"
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+  </iframe>
+</div>
+
+     
+   <div id="iframe-container-5" class="container-item">   <iframe src="https://a-l-p-a-c-a.github.io/AlpacaTheAi/" 
+    width="350px"
+    height="420px"      
+    style="border:none; overflow:hidden;" 
+    scrolling="yes" 
+    frameborder="0" 
+    allowfullscreen="yes"
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+  </iframe>
+</div>
+    
+     
+   
+   <div class="story-container"><img src="image/socks.jpg" align="center">
+  <h2 align: center;>🧦 Sock Theory: A Study in Domestic Anomalies</h2>
+  <div class="story-content">
+      <div class="story-text">
+    <p>This is the second paragraph of your short story...
+I told his friend once,
+“Your friend is a thief of socks.”
+He blinked and said, “Who? Who is my friend?”
+In my head I think, My husband, your best friend.
+And I meant it.
+Though now I wonder if perhaps they’re in on it together.
+I mean, who can resist a pair of cushy warm socks?</p><p>
+He does the laundry, and what goes in never comes out.
+I buy socks — good socks — the kind that hug your feet, thick and soft, almost emotional.
+You know that feeling?
+Like, “Finally, something in this world understands me.”
+And then — gone. Every time.</p><p>
+I only ever get to wear each pair once.
+It’s become a ritual:
+I put on new socks, feel normal for a day, take them off,
+and they vanish into the ether.
+The laundry basket becomes a portal.
+The dryer — a wormhole.
+The man? Probably the interdimensional gatekeeper.
+The other day, I swear I saw him walk by with a handful of them —
+my socks, my colors, my little fabric joys —
+pulled from his bag like trophies.
+“Hey,” I said, “those are mine.”
+He didn’t even blink.
+“Oh yeah, probably,” he said,
+as if possession was relative in this dimension. </p>
+        <p>  I've asked twice since then and that was two weeks ago.
+I haven’t seen those socks since.
+Any questioning leads to a dead-end —
+like I’m hitting some kind of cognitive firewall.
+The subject changes, the conversation loops,
+and suddenly I’m apologizing
+for asking where my own socks went.
+So now, every month, I buy twelve new pairs.
+Twelve sacrificial offerings to the void.
+It’s been eight months now.
+Ninety-six socks.
+Ninety-six chances for them to return.
+Ninety-six failures.
+Some months, I buy extra — for the “hey, these are cute” value.
+Those are the ones that hurt the most when they go missing.
+Sometimes, when the house is quiet, I swear I hear them —
+not footsteps, exactly,
+but the soft static of movement —
+a whispering friction, fabric against fabric,
+like something folding itself out of phase with reality.
+        </p><p>
+They say entropy always wins.
+But I think my socks found a loophole.
+A soft dimension stitched between ours and theirs —
+a world of endless static warmth,
+where lost laundry goes to evolve.
+Maybe, in that other place, my socks are still here.
+Maybe they remember me.
+Maybe they’ve built their own civilization —
+soft cities of woven souls,
+the Davian Thread Network,
+where every missing thing gathers to dream of its owner.
+And maybe he’s their high priest —
+sitting there, toasty and smug,
+surrounded by all the warmth he’s stolen from me.
+The Sock King of the Fifth Fold.
+Lord of my things.
+And me?
+Barefoot prophet of the cold world he left behind.
+Now that I think about it…
+my socks aren’t the only things that keep going missing.</p>
+  
+</div></div></div>
+   
+<object type="text/html" data="https://a-l-p-a-c-a.github.io/AlpacaTheAi/" width="80%" height="500px"></object>
+
+    </div>
+    
+    <div class="container">
+      <link rel="import" href="https://a-l-p-a-c-a.github.io/AlpacaTheAi/">
+      <a href="https://a-l-p-a-c-a.github.io/AlpacaTheAi/"></a>
+
+    </div>
